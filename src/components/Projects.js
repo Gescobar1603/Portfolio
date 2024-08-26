@@ -50,7 +50,7 @@ export const Projects = () =>{
                         <h2>Proyectos</h2>
                         <p>Aqui algunos de mis proyectos persolanes</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                        <Nav variant ="pills" defaultActiveKey="/home">
+                        {/* <Nav variant ="pills" defaultActiveKey="/home">
                         <Nav.Item>
                             <Nav.Link eventKey="first">Seccion 1</Nav.Link>
                         </Nav.Item>
@@ -60,7 +60,7 @@ export const Projects = () =>{
                         <Nav.Item>
                             <Nav.Link eventKey ="third">Seccion 3</Nav.Link>
                         </Nav.Item>
-                        </Nav>
+                        </Nav> */} 
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
                                 <Row>
