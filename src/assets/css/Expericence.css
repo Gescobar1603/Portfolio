@@ -1,0 +1,149 @@
+/* ExperienceTimeline.css */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #c37114;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* Ajuste para alinear el punto de unión en la línea central */
+.timeline-item::before {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #c37114;
+  z-index: 1;
+  left: 100%;
+  margin-left: -13.75px; /* Centra el punto en la línea */
+}
+
+/* Ajuste adicional para los elementos a la derecha */
+.timeline-item:nth-child(even)::before {
+  left: 2.75px; /* Coloca el punto en la línea central */
+}
+
+.timeline-content {
+  padding: 15px 20px;
+  background-color: #ff9100;
+  position: relative;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.show .timeline-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 12px;
+  color: #f0f0f0;
+}
+
+.view-all {
+  display: block;
+  margin: 40px auto;
+  width: 150px;
+  padding: 10px 20px;
+  background-color: #2a2a2a;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-all:hover {
+  background-color: #ff9100;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 30px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem; /* Puedes ajustar el tamaño de la fuente según tus necesidades */
+  margin-bottom: 40px;
+  color: #943fb5;
+  font-weight: bold;
+  padding: 10px 0;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px; /* Ancho de la línea */
+  height: 4px; /* Altura de la línea */
+  background-color: #ff9100; /* Color de la línea */
+  margin: 10px auto 0; /* Centrar la línea */
+  border-radius: 2px;
+}
