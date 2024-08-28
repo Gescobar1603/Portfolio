@@ -14,40 +14,33 @@ export const Experience = () => {
         sr.reveal('.timeline-item', { interval: 200 });
       }, []);
       const experiences = [
-        {
+      {
         n:1,
-        title: 'Software Engineer',
-        company: 'Tech Company',
-        duration: 'Jan 2021 - Present',
-        description: 'Working on full-stack development with MERN stack...',
+        title: 'Asistente de TI',
+        company: 'AGP GLASS PERU S.A.C',
+        duration: '01/2023 - 08/2023',
+        description: 'Asistente de Jefatura de sistemas, SAP y sistema de Tickets en JIRA, Bases de Datos SQL',
       },
       {
         n:2,
-        title: 'Frontend Developer',
-        company: 'Web Agency',
-        duration: 'Jun 2019 - Dec 2020',
-        description: 'Focused on creating responsive websites using React...',
-      },
-      {
-        n:3,
-        title: 'Intern',
-        company: 'Startup Inc.',
-        duration: 'Jan 2019 - May 2019',
-        description: 'Gained experience in frontend technologies and agile...',
+        title: 'Practicante Porfesional de Sistemas',
+        company: 'Summagold Corporation',
+        duration: '01/2022 - 12/2022',
+        description: 'Encargado del area de Sistemas realizando Desarrollo de aplicaciones Web, Soportes, Mentenimientos y Administracion de servicios de Red',
       },
             {
-        n:4,
-        title: 'Frontend Developer',
-        company: 'Web Agency',
-        duration: 'Jun 2019 - Dec 2020',
-        description: 'Focused on creating responsive websites using React...',
+        n:3,
+        title: 'Practicante Pre-Profesional de Sistemas',
+        company: 'Pc Express S.A.C.',
+        duration: '01/2021 - 07/2021',
+        description: 'Diseño de E-commerce para empresa de la ciudad de Trujillo',
       },
       // Más experiencias...
     ];
   
     return (
       <section className="experience-section">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">Experiencia</h2>
         <div className="timeline">
           {experiences.map((exp, index) => (
             <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={exp.n}>
@@ -61,6 +54,8 @@ export const Experience = () => {
             </div>
           ))}
         </div>
+
+        <a href="#more" className="view-all">View All</a>
         
       </section>
     );

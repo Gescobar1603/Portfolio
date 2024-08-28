@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap"
-import { ArrowRightCircle} from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/logo1.PNG";
 import TypingEffect from "./funtions/TypingEffect";
-
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 
 
@@ -24,7 +25,6 @@ export const Banner  = () => {
         }, delta);
     
         return () => { clearInterval(ticker) };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [text])
 
     const tick = () => {
@@ -53,26 +53,31 @@ export const Banner  = () => {
       }
 
     return (
-        <section className="banner" id="Home">
-
-            <Container>
-
-                <Row className="align-items-center">
-                    <Col xs={12} md={10} xl={7}>
-                    <span className="tagline">Bienvenido a mi Portfolio</span>
-                    <h1>{`Hi There, I'm `}<span className="wrap"><h1>{`Gustavo Escobar `}</h1><TypingEffect /></span></h1>
-                    <p>Soy Bachiller en Ingenieria de Sistemas de Trujillo, Perú. 
-                      
-                    </p>
-                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle  size={25}/></button>
-                    </Col>
-
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img" />
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    )
+      <section className="banner" id="home">
+      <Container>
+        <Row className="aligh-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <span className="tagline">Bienvenido a mi Portfolio</span>
+                <h1>{`Gustavo Escobar`} <span ><span className="wrap"></span><TypingEffect></TypingEffect></span></h1>
+                  <p>Ingeniero de Sistemas Computacionales.</p>
+                  <p>Con 24 años, me apasionan las nuevas tecnologías. Estoy en constante búsqueda de perfeccionar mis habilidades y aplicar mi experiencia en el desarrollo de software y tecnología, creando soluciones innovadoras y efectivas.</p>
+              </div>}
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  )
 
 }

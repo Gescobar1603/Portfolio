@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable jsx-a11y/alt-text */
 import { Col, Container, Row } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
@@ -36,28 +34,27 @@ export const Skills = () => {
                     <Col>
                         <div className="skill-bx">
                             <h2>
-                                Skills
+                                Habilidades
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer consectetur luctus dui, eget tincidunt felis fermentum id. Sed ut consequat risus. Sed viverra dolor at eros aliquam tincidunt. Integer ac vehicula felis, ac condimentum ligula. Duis blandit augue in libero vehicula, in fermentum risus varius.
+                            Ingeniero de software con experiencia en Angular y React para desarrollo frontend, manejo de bases de datos SQL, y en el uso del framework de backend Spring Boot. Especializado en la creación de soluciones Full-Stack, con un enfoque en optimizar la experiencia del usuario. Comprometido con la innovación y la mejora continua en el desarrollo de aplicaciones web.
                             </p>
                             <Carousel responsive = {responsive} infinite={true} className="skill-slider">
                                 <div className='item'>
                                     <img src={meter1} alt='Image'/>
-                                    <h5>Web Development</h5>
+                                    <h5>Fronted Development</h5>
                                 </div>
                                 <div className='item'>
                                     <img src={meter2} alt='Image'/>
-                                    <h5>Brand Identify</h5>
+                                    <h5>Backend Development</h5>
                                 </div>
                                 <div className='item'>
                                     <img src={meter3} alt='Image'/>
-                                    <h5>Logo Design</h5>
+                                    <h5>IT Support</h5>
                                 </div>
                                 <div className='item'>
                                     <img src={meter1} alt='Image'/>
-                                    <h5>Web Development</h5>
+                                    <h5>SQL Server</h5>
                                 </div>
                             </Carousel>
                         </div>
